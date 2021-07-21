@@ -1,4 +1,5 @@
 {
+  "homepage": "https://abdi1001.github.io/social-app",
   "name": "react-social",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +18,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

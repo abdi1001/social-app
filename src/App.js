@@ -3,7 +3,7 @@ import { Login } from './pages/login/Login';
 import { Register } from './pages/register/Register';
 import { Profile } from './pages/profile/Profile';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Redirect,
@@ -14,7 +14,7 @@ import { useContext } from 'react';
 function App() {
   const { user } = useContext(AuthContext);
   return (
-    <Router>
+    <Router basename="/">
       <Switch>
         <Route exact path="/">
           {user ? <Home /> : <Register />}
